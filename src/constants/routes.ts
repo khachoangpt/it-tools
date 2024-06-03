@@ -1,5 +1,7 @@
 import type { PageMeta } from '@/types/routes.types'
 
+import type { ToolsDataType } from './tools'
+
 export const pageList = {
   login: {
     title: 'Login',
@@ -13,6 +15,12 @@ export const pageList = {
     isAuth: false,
     pattern: ['maintenance'],
   },
+  tool: (config?: { tool?: ToolsDataType }) => ({
+    title: config?.tool?.title ?? '',
+    href: `/${config?.tool?.id ?? ''}`,
+    isAuth: false,
+    pattern: [config?.tool?.id ?? ''],
+  }),
   home: {
     title: 'Home',
     href: '/',

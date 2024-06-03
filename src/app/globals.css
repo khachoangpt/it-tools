@@ -65,7 +65,7 @@
     --radius-large: 1rem;
     --radius-xlarge: 625rem;
 
-    --card: 0 0% 100%;
+    --card: #ffffff;
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
@@ -155,7 +155,7 @@
     --radius-large: 1rem;
     --radius-xlarge: 625rem;
 
-    --card: 222.2 84% 4.9%;
+    --card: #27282d;
     --card-foreground: 210 40% 98%;
 
     --popover: 222.2 84% 4.9%;
@@ -189,4 +189,25 @@
   body {
     @apply bg-base text-foreground;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: 'transparent';
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

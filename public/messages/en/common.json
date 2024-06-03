@@ -1,0 +1,13 @@
+{
+  "Common": {
+    "header": {
+      "home": "Home",
+      "blog": "Blog",
+      "button-logout": "Logout",
+      "button-login": "Login"
+    },
+    "toast": {
+      "unknown-error": "Unknown error"
+    }
+  }
+}

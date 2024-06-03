@@ -1,0 +1,14 @@
+{
+  "Login": {
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "login": "Login"
+    },
+    "toast": {
+      "login-success": "Login success",
+      "customer-not-found": "Customer not found",
+      "email-or-password-incorrect": "Email or password incorrect"
+    }
+  }
+}

@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Container className="flex items-center gap-2">
       <Icon icon="HamburgerIcon" onClick={changeSidebarState} />
-      <Link href={pageList.home.href}>
+      <Link href={pageList.home.href} aria-label="Go to home link">
         <Icon icon="HomeIcon" />
       </Link>
       <SearchButton className="flex-1" />

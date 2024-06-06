@@ -39,7 +39,12 @@ export const Select = (props: Props) => {
 
   return (
     <SelectBase disabled={disabled} onValueChange={onChange} value={value}>
-      <SelectTrigger className={cn(className)} variant={variant} ref={ref}>
+      <SelectTrigger
+        className={cn(className)}
+        variant={variant}
+        ref={ref}
+        aria-label="Select language"
+      >
         <SelectValue
           placeholder={
             <Text className="text-foreground-muted">{placeholder}</Text>

@@ -17,6 +17,7 @@ const useSidebarController = () => {
 
   return {
     sidebarState,
+    setSidebarState,
   }
 }
 

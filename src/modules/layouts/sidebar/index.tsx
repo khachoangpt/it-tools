@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <Container
       data-state={sidebarState}
-      className="h-screen overflow-hidden bg-card transition-all duration-500 ease-in-out hover:overflow-y-scroll data-[state=closed]:w-0 data-[state=open]:w-60"
+      className="z-10 h-screen overflow-hidden bg-card transition-all duration-500 ease-in-out hover:overflow-y-scroll data-[state=closed]:w-0 data-[state=open]:w-60 max-sm:absolute"
     >
       <Images.SidebarHeader className="absolute z-10 mt-[-75px] h-fit w-full" />
       <Link

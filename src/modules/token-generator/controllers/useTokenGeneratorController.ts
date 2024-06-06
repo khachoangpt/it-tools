@@ -1,0 +1,43 @@
+import { useEffect, useState } from 'react'
+import { useForm, useWatch } from 'react-hook-form'
+
+import { generateRandomToken } from '@/utils/token-generator'
+
+import type { TokenGeneratorForm } from '../types/token-generator-form.type'
+
+const useTokenGeneratorController = () => {
+  const form = useForm<TokenGeneratorForm>({ defaultValues })
+  const {
+    control,
+    formState: { errors },
+  } = form
+  const formDataWatch = useWatch({ control })
+  const [randomText, setRandomText] = useState<string>('')
+
+  useEffect(() => {
+    generate()
+  }, [formDataWatch])
+
+  const generate = () => {
+    const text = generateRandomToken({
+      isLowercase: formDataWatch.isLowercase ?? false,
+      isNumber: formDataWatch.isNumber ?? false,
+      isSymbol: formDataWatch.isSymbol ?? false,
+      isUppercase: formDataWatch.isUppercase ?? false,
+      length: formDataWatch.length?.at(0) ?? 1,
+    })
+    setRandomText(text)
+  }
+
+  return { tokenGeneratorForm: form, control, errors, randomText, generate }
+}
+
+export default useTokenGeneratorController
+
+const defaultValues: TokenGeneratorForm = {
+  isLowercase: false,
+  isNumber: false,
+  isSymbol: false,
+  isUppercase: true,
+  length: [32],
+}

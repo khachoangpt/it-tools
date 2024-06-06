@@ -1,7 +1,7 @@
 import type { Icons } from '#/svgs'
 
 export type ToolsDataType = {
-  id: string
+  id: ToolIds
   title: string
   subtitle?: string
   isLike?: boolean
@@ -9,15 +9,21 @@ export type ToolsDataType = {
   content?: ToolsDataType[]
 }
 
+export enum ToolIds {
+  CRYPTO = 'crypto',
+  HASH_TEXT = 'hash-text',
+  TOKEN_GENERATOR = 'token-generator',
+}
+
 export const tools: ToolsDataType[] = [
   {
-    id: 'crypto',
+    id: ToolIds.CRYPTO,
     title: 'Crypto',
     icon: undefined,
     isLike: true,
     content: [
       {
-        id: 'token-generator',
+        id: ToolIds.TOKEN_GENERATOR,
         title: 'Token generator',
         isLike: false,
         subtitle:
@@ -25,7 +31,7 @@ export const tools: ToolsDataType[] = [
         icon: 'TokenGeneratorIcon',
       },
       {
-        id: 'hash-text',
+        id: ToolIds.HASH_TEXT,
         title: 'Hash text',
         isLike: false,
         subtitle:

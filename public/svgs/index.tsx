@@ -3,6 +3,7 @@ import type { FC, HTMLAttributes, SVGProps } from 'react'
 import { default as CheckCircleSolid } from './check-circle-solid.svg'
 import { default as CircleHalfSolid } from './circle-half-solid.svg'
 import { default as CircleMiniSolid } from './circle-mini-solid.svg'
+import { default as Copy } from './copy.svg'
 import { default as Github } from './github.svg'
 import { default as Hamburger } from './hamburger.svg'
 import { default as HashText } from './hash-text.svg'
@@ -44,6 +45,7 @@ export const Icons = {
   TokenGeneratorIcon: TokenGenerator as Icon,
   HashTextIcon: HashText as Icon,
   HeartSolidIcon: HeartSolid as Icon,
+  CopyIcon: Copy as Icon,
 }
 
 export const Images = {

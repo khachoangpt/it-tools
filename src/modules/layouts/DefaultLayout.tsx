@@ -19,7 +19,7 @@ const DefaultLayout = ({ children }: Props) => {
         <Sidebar />
       </Container>
       {/* Content */}
-      <Container className="flex-1 p-6">
+      <Container className="h-[100vh] flex-1 overflow-auto p-6">
         <Header />
         <Container>{children}</Container>
       </Container>

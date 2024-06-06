@@ -1,7 +1,7 @@
-import { Container } from '@/components/ui/container'
+import TokenGeneratorModule from '@/modules/token-generator'
 
 const TokenGeneratorPage = () => {
-  return <Container />
+  return <TokenGeneratorModule />
 }
 
 export default TokenGeneratorPage

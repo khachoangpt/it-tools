@@ -44,7 +44,7 @@ const MenuCollapsible = ({ tool }: Props) => {
                 key={index}
               >
                 <Icon icon={item.icon} className="h-5 w-5" />
-                <Text>{item.title}</Text>
+                <Text className="whitespace-nowrap">{item.title}</Text>
               </Link>
             ))}
           </Container>

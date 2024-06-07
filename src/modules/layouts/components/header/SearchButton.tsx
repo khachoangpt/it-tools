@@ -8,7 +8,7 @@ type Props = {
   className?: string
 }
 
-const SearchButton = ({ className }: Props) => {
+export const SearchButton = ({ className }: Props) => {
   return (
     <Button
       variant="neutral"
@@ -21,5 +21,3 @@ const SearchButton = ({ className }: Props) => {
     </Button>
   )
 }
-
-export default SearchButton

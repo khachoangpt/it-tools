@@ -1,4 +1,4 @@
-export type TokenGeneratorForm = {
+export type TokenGeneratorFormType = {
   isUppercase: boolean
   isLowercase: boolean
   isNumber: boolean

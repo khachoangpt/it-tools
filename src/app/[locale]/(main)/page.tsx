@@ -1,5 +1,5 @@
 import { Container } from '@/components/ui/container'
-import Tools from '@/modules/home/tools'
+import { Tools } from '@/modules/home'
 
 const HomePage = () => {
   return (

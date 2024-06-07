@@ -5,12 +5,12 @@ import { Separator } from '@/components/ui/separator'
 import { Text } from '@/components/ui/text'
 
 type Props = {
-  title: string
-  subtitle: string
-  isLike: boolean
+  title?: string
+  subtitle?: string
+  isLike?: boolean
 }
 
-const PageTitle = ({ title, subtitle, isLike }: Props) => {
+const PageTitle = ({ title = '', subtitle = '', isLike = false }: Props) => {
   return (
     <Container className="m-auto py-10">
       <Container className="flex items-center justify-between">

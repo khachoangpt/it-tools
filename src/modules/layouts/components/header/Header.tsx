@@ -4,30 +4,20 @@ import { Select } from '@/components/common/select'
 import { Container } from '@/components/ui/container'
 import { Icon } from '@/components/ui/icons'
 import { pageList } from '@/constants'
-import { SidebarState, useLayoutStore } from '@/store/layout'
 
-import DonateButton from './components/DonateButton'
-import SearchButton from './components/SearchButton'
+import { DonateButton } from './DonateButton'
+import { HamburgerButton } from './HamburgerButton'
+import { SearchButton } from './SearchButton'
 
-const Header = () => {
-  const { setSidebarState, sidebarState } = useLayoutStore()
-
-  const changeSidebarState = () => {
-    setSidebarState(
-      sidebarState === SidebarState.OPEN
-        ? SidebarState.CLOSED
-        : SidebarState.OPEN,
-    )
-  }
-
+export const Header = () => {
   return (
     <Container className="flex items-center gap-2">
-      <Icon icon="HamburgerIcon" onClick={changeSidebarState} />
+      <HamburgerButton />
       <Link href={pageList.home.href} aria-label="Go to home link">
         <Icon icon="HomeIcon" />
       </Link>
       <SearchButton className="flex-1" />
-      <Container className="flex items-center gap-2 max-md:hidden">
+      <Container className="flex items-center gap-2 max-lg:hidden">
         <Select
           className="w-32"
           options={[{ value: '1', label: 'Option 1' }]}
@@ -42,5 +32,3 @@ const Header = () => {
     </Container>
   )
 }
-
-export default Header

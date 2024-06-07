@@ -3,10 +3,10 @@ import { useForm, useWatch } from 'react-hook-form'
 
 import { generateRandomToken } from '@/utils/token-generator'
 
-import type { TokenGeneratorForm } from '../types/token-generator-form.type'
+import type { TokenGeneratorFormType } from '../types/token-generator-form.type'
 
-const useTokenGeneratorController = () => {
-  const form = useForm<TokenGeneratorForm>({ defaultValues })
+export const useTokenGeneratorController = () => {
+  const form = useForm<TokenGeneratorFormType>({ defaultValues })
   const {
     control,
     formState: { errors },
@@ -32,9 +32,7 @@ const useTokenGeneratorController = () => {
   return { tokenGeneratorForm: form, control, errors, randomText, generate }
 }
 
-export default useTokenGeneratorController
-
-const defaultValues: TokenGeneratorForm = {
+const defaultValues: TokenGeneratorFormType = {
   isLowercase: false,
   isNumber: false,
   isSymbol: false,

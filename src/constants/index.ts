@@ -1,5 +1,6 @@
 export * from './cookies'
 export * from './languages'
+export * from './media-query'
 export * from './routes'
 export * from './theme'
 export * from './tools'

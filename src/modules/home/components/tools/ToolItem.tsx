@@ -10,7 +10,7 @@ type Props = {
   tool: ToolsDataType
 }
 
-const ToolItem = ({ tool }: Props) => {
+export const ToolItem = ({ tool }: Props) => {
   return (
     <Link href={pageList.tool({ tool }).href}>
       <Card className="h-full cursor-pointer border-2 px-6 py-5 transition-all duration-500 hover:border-spacing-3 hover:border-green-600">
@@ -24,5 +24,3 @@ const ToolItem = ({ tool }: Props) => {
     </Link>
   )
 }
-
-export default ToolItem

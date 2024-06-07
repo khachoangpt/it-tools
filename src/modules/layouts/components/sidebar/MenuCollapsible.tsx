@@ -13,13 +13,13 @@ import { Separator } from '@/components/ui/separator'
 import { Text } from '@/components/ui/text'
 import { pageList, type ToolsDataType } from '@/constants'
 
-import useMenuCollapsibleController from '../controllers/useMenuCollapsibleController'
+import useMenuCollapsibleController from '../../controllers/useMenuCollapsibleController'
 
 type Props = {
   tool: ToolsDataType
 }
 
-const MenuCollapsible = ({ tool }: Props) => {
+export const MenuCollapsible = ({ tool }: Props) => {
   const { scope, handleChange } = useMenuCollapsibleController()
   const pathname = usePathname()
 
@@ -53,5 +53,3 @@ const MenuCollapsible = ({ tool }: Props) => {
     </Collapsible>
   )
 }
-
-export default MenuCollapsible

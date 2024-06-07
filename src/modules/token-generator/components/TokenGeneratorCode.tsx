@@ -4,7 +4,7 @@ import { Container } from '@/components/ui/container'
 import { shuffleStringCode } from '@/utils/shuffle-string'
 import { tokenGeneratorCode } from '@/utils/token-generator'
 
-const TokenGeneratorCode = () => {
+export const TokenGeneratorCode = () => {
   return (
     <Container className="flex w-full flex-col gap-y-8">
       <Card>
@@ -16,5 +16,3 @@ const TokenGeneratorCode = () => {
     </Container>
   )
 }
-
-export default TokenGeneratorCode

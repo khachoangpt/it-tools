@@ -1,17 +1,20 @@
+'use client'
+
 import Link from 'next/link'
 import { Fragment } from 'react'
 
 import { Container } from '@/components/ui/container'
 import { Text } from '@/components/ui/text'
 import { pageList, tools } from '@/constants'
-import { SidebarState } from '@/store/layout'
+import { SidebarState, useLayoutStore } from '@/store/layout'
 import { Images } from '#/svgs'
 
-import MenuCollapsible from './components/MenuCollapsible'
-import useSidebarController from './controllers/useSidebarController'
+import useSidebarController from '../../controllers/useSidebarController'
+import { MenuCollapsible } from './MenuCollapsible'
 
-const Sidebar = () => {
-  const { sidebarState, setSidebarState } = useSidebarController()
+export const Sidebar = () => {
+  useSidebarController()
+  const { sidebarState, setSidebarState } = useLayoutStore()
 
   return (
     <Fragment>
@@ -46,5 +49,3 @@ const Sidebar = () => {
     </Fragment>
   )
 }
-
-export default Sidebar

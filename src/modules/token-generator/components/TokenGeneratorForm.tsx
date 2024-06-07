@@ -9,9 +9,9 @@ import { Form, FormField } from '@/components/ui/form'
 import { Textarea } from '@/components/ui/textarea'
 import useClipboard from '@/hooks/useClipboard'
 
-import useTokenGeneratorController from '../controllers/useTokenGeneratorController'
+import { useTokenGeneratorController } from '../controllers/useTokenGeneratorController'
 
-const TokenGeneratorForm = () => {
+export const TokenGeneratorForm = () => {
   const { copyToClipboard } = useClipboard()
   const { control, tokenGeneratorForm, randomText, generate } =
     useTokenGeneratorController()
@@ -109,5 +109,3 @@ const TokenGeneratorForm = () => {
     </Form>
   )
 }
-
-export default TokenGeneratorForm

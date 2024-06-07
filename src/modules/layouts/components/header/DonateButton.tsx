@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/container'
 import { Icon } from '@/components/ui/icons'
 import { Text } from '@/components/ui/text'
 
-const DonateButton = () => {
+export const DonateButton = () => {
   return (
     <Button
       variant="base"
@@ -16,5 +16,3 @@ const DonateButton = () => {
     </Button>
   )
 }
-
-export default DonateButton

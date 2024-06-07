@@ -9,11 +9,11 @@ import { getToolData } from '@/utils/get-tool-data'
 
 const TokenGeneratorPage = () => {
   const tokenGenerator = getToolData(ToolIds.TOKEN_GENERATOR)
-  const { title, subtitle, isLike } = tokenGenerator!
+  const { title, subtitle, isLike, id } = tokenGenerator!
 
   return (
     <Container className="m-auto max-w-2xl">
-      <PageTitle title={title} subtitle={subtitle} isLike={isLike} />
+      <PageTitle id={id} title={title} subtitle={subtitle} isLike={isLike} />
       <Container className="flex items-start justify-center">
         <TokenGeneratorForm />
       </Container>

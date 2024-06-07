@@ -24,24 +24,24 @@ export const TokenGeneratorForm = () => {
             <FormField
               name="isUppercase"
               control={control}
-              render={({ field: { value, onChange } }) => (
+              render={({ field: { value, onChange, name } }) => (
                 <FormSwitch
                   checked={value}
                   onChange={onChange}
                   label="Uppercase (ABC...)"
-                  name="isUppercase"
+                  name={name}
                 />
               )}
             />
             <FormField
               name="isNumber"
               control={control}
-              render={({ field: { value, onChange } }) => (
+              render={({ field: { value, onChange, name } }) => (
                 <FormSwitch
                   checked={value}
                   onChange={onChange}
                   label="Numbers (123...)"
-                  name="isNumber"
+                  name={name}
                 />
               )}
             />
@@ -50,24 +50,24 @@ export const TokenGeneratorForm = () => {
             <FormField
               name="isLowercase"
               control={control}
-              render={({ field: { value, onChange } }) => (
+              render={({ field: { value, onChange, name } }) => (
                 <FormSwitch
                   checked={value}
                   onChange={onChange}
                   label="Lowercase (abc...)"
-                  name="isLowercase"
+                  name={name}
                 />
               )}
             />
             <FormField
               name="isSymbol"
               control={control}
-              render={({ field: { value, onChange } }) => (
+              render={({ field: { value, onChange, name } }) => (
                 <FormSwitch
                   checked={value}
                   onChange={onChange}
                   label="Symbols (!-;...)"
-                  name="isSymbol"
+                  name={name}
                 />
               )}
             />

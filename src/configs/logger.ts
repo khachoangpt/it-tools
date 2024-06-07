@@ -14,18 +14,18 @@ export const logger = winston.createLogger({
         }),
       ),
     }),
-    new winston.transports.DailyRotateFile({
-      format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.prettyPrint(),
-        winston.format.printf((info) => {
-          return `[${info.level}] ${info.timestamp} :: ${info.message}`
-        }),
-      ),
-      filename: 'logs/logger-%DATE%.log',
-      datePattern: 'YYYY-MM-DD-HH',
-      zippedArchive: true,
-      maxSize: '5m',
-    }),
+    // new winston.transports.DailyRotateFile({
+    //   format: winston.format.combine(
+    //     winston.format.timestamp(),
+    //     winston.format.prettyPrint(),
+    //     winston.format.printf((info) => {
+    //       return `[${info.level}] ${info.timestamp} :: ${info.message}`
+    //     }),
+    //   ),
+    //   filename: 'logs/logger-%DATE%.log',
+    //   datePattern: 'YYYY-MM-DD-HH',
+    //   zippedArchive: true,
+    //   maxSize: '5m',
+    // }),
   ],
 })

@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container'
 import { Tools } from '@/modules/home'
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <Container className="mt-20">
       <Tools />

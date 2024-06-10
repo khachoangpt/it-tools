@@ -1,5 +1,6 @@
 'use client'
 
+import type { MouseEvent } from 'react'
 import { useEffect, useState } from 'react'
 
 import { Icon } from '@/components/ui/icons'
@@ -21,17 +22,34 @@ const LikeButton = ({ id }: Props) => {
     }
   }, [])
 
-  const toggleFavorite = () => {
+  useEffect(() => {
+    const listenStorageChange = () => {
+      const storedFavoriteList = localStorage.getItem('favoriteList')
+      if (storedFavoriteList) {
+        setFavoriteList(JSON.parse(storedFavoriteList))
+      }
+    }
+    window.addEventListener('storage', listenStorageChange)
+
+    return () => {
+      window.removeEventListener('storage', listenStorageChange)
+    }
+  }, [])
+
+  const toggleFavorite = (event: MouseEvent) => {
+    event.preventDefault()
+    event.stopPropagation()
     const updatedFavoriteList = favoriteList.includes(id)
       ? favoriteList.filter((toolId) => toolId !== id)
       : [...favoriteList, id]
     setFavoriteList(updatedFavoriteList)
     localStorage.setItem('favoriteList', JSON.stringify(updatedFavoriteList))
+    window.dispatchEvent(new Event('storage'))
   }
 
   return (
     <Icon
-      onClick={toggleFavorite}
+      onClick={(e) => toggleFavorite(e)}
       icon={favoriteList.includes(id) ? 'HeartSolidIcon' : 'HeartIcon'}
       className="h-5 w-5"
     />

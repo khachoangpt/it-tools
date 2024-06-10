@@ -13,7 +13,9 @@ import useSidebarController from '../../controllers/useSidebarController'
 import { MenuCollapsible } from './MenuCollapsible'
 
 export const Sidebar = () => {
-  useSidebarController()
+  const { favoriteTools } = useSidebarController()
+  const isFavoriteToolsExist =
+    !!favoriteTools.content && favoriteTools.content.length > 0
   const { sidebarState, setSidebarState } = useLayoutStore()
 
   return (
@@ -35,6 +37,7 @@ export const Sidebar = () => {
           </Text>
         </Link>
         <Container className="mb-10 pt-40">
+          {isFavoriteToolsExist && <MenuCollapsible tool={favoriteTools} />}
           {tools.map((tool, index) => (
             <MenuCollapsible key={index} tool={tool} />
           ))}

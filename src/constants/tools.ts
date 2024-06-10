@@ -10,6 +10,7 @@ export type ToolsDataType = {
 }
 
 export enum ToolIds {
+  FAVORITE = 'favorite',
   CRYPTO = 'crypto',
   HASH_TEXT = 'hash-text',
   TOKEN_GENERATOR = 'token-generator',

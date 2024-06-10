@@ -4,7 +4,7 @@ import { Separator } from '@/components/ui/separator'
 import { Text } from '@/components/ui/text'
 import type { ToolIds } from '@/constants'
 
-import LikeButton from './LikeButton'
+import LikeButton from '../button/LikeButton'
 
 type Props = {
   id?: ToolIds

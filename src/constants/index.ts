@@ -1,4 +1,5 @@
 export * from './cookies'
+export * from './enums'
 export * from './languages'
 export * from './media-query'
 export * from './routes'
